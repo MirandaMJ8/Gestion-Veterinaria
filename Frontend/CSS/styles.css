@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2f4aa0;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover bonito */
+.sidebar ul li a:hover {
+    background: rgba(255,255,255,0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Contenido */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f6fa;
+}
