@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>VetClinic</h2>
+        <ul>
+            <li><a href="../index.html">Panel</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="citas.html">Citas</a></li>
+            <li><a href="facturas.html">Facturación</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+
+        <div class="header">
+            <h1>Gestión de Clientes</h1>
+            <button id="btnNuevo">+ Nuevo Cliente</button>
+        </div>
+
+        <!-- FORMULARIO (oculto) -->
+        <div id="formContainer" class="hidden">
+            <form id="formCliente">
+                <input type="text" id="dni" placeholder="DNI">
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="text" id="apellido" placeholder="Apellido">
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+
+        <!-- LISTA -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Contacto</th>
+                </tr>
+            </thead>
+            <tbody id="tablaClientes">
+                <!-- aquí van los datos -->
+            </tbody>
+        </table>
+
+    </main>
+
+</div>
+<script src="../js/clientes.js"></script>
+</body>
+</html>
