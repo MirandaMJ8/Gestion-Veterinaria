@@ -5,13 +5,13 @@ body {
 
 /* CONTENEDOR PRINCIPAL */
 .layout {
-    display: flex; /* 👈 clave */
+    display: flex;
     height: 100vh;
 }
 
 /* SIDEBAR */
 .sidebar {
-    width: 250px; /* 👈 ancho fijo */
+    width: 250px;
     background-color: #2f4aa0;
     color: white;
     padding: 20px;
@@ -49,7 +49,7 @@ body {
 
 /* CONTENIDO */
 .main-content {
-    flex: 1; /* 👈 ocupa todo el espacio restante */
+    flex: 1;
     background-color: #f5f6fa;
     padding: 20px;
 }
@@ -118,4 +118,68 @@ th, td {
 th {
     text-align: left;
     background: #f0f0f0;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.topbar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card p {
+    color: gray;
+    margin: 0;
+}
+
+.card h2 {
+    margin: 5px 0 0;
+}
+
+/* CITAS */
+.citas-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cita {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.hora {
+    background: #e0e7ff;
+    padding: 10px;
+    border-radius: 100%;
+    margin-right: 15px;
 }
