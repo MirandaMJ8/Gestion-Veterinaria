@@ -5,8 +5,8 @@
     --primary-hover: #4338CA;
     --secondary-color: #10B981;
     --bg-color: #F3F4F6;
-    --sidebar-bg: #111827;
-    --sidebar-hover: #1F2937;
+    --sidebar-bg: #4338CA;
+    --sidebar-hover: #4F46E5;
     --text-main: #1F2937;
     --text-muted: #6B7280;
     --white: #FFFFFF;
@@ -159,7 +159,12 @@ h1 {
 .topbar {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 32px;
+    align-items: center;
+    background: var(--white);
+    padding: 16px 40px;
+    margin: -32px -40px 32px -40px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .topbar input {
@@ -169,13 +174,52 @@ h1 {
     border: 1px solid var(--border-color);
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    box-shadow: var(--shadow-sm);
-    transition: border-color 0.2s;
+    background-color: var(--bg-color);
+    transition: border-color 0.2s, background-color 0.2s;
+    margin-right: 24px;
+    box-shadow: none;
 }
 
 .topbar input:focus {
     outline: none;
     border-color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+    background: var(--bg-color);
+    transform: none;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #EF4444;
+    border-radius: 50%;
+    border: 2px solid var(--white);
 }
 
 /* BOTONES */
@@ -206,6 +250,7 @@ button:active {
     border-radius: 6px;
     background-color: var(--sidebar-hover);
 }
+
 .btn-small:hover {
     background-color: var(--text-main);
 }
@@ -264,7 +309,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 16px 24px;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
@@ -299,10 +345,12 @@ tr:hover td {
     font-size: 12px;
     font-weight: 600;
 }
+
 .badge.success {
     background-color: #D1FAE5;
     color: #065F46;
 }
+
 .badge.warning {
     background-color: #FEF3C7;
     color: #92400E;
@@ -350,6 +398,7 @@ tr:hover td {
 .icon-blue {
     background-color: #E0F2FE;
 }
+
 .icon-blue img {
     filter: invert(32%) sepia(93%) saturate(2453%) hue-rotate(211deg) brightness(95%) contrast(93%);
 }
@@ -357,6 +406,7 @@ tr:hover td {
 .icon-green {
     background-color: #D1FAE5;
 }
+
 .icon-green img {
     filter: invert(49%) sepia(82%) saturate(399%) hue-rotate(97deg) brightness(91%) contrast(93%);
 }
@@ -364,6 +414,7 @@ tr:hover td {
 .icon-purple {
     background-color: #F3E8FF;
 }
+
 .icon-purple img {
     filter: invert(27%) sepia(85%) saturate(3015%) hue-rotate(258deg) brightness(92%) contrast(95%);
 }
@@ -371,6 +422,7 @@ tr:hover td {
 .icon-yellow {
     background-color: #FEF3C7;
 }
+
 .icon-yellow img {
     filter: invert(53%) sepia(83%) saturate(1209%) hue-rotate(14deg) brightness(94%) contrast(97%);
 }
@@ -386,6 +438,13 @@ tr:hover td {
     margin: 0;
     font-size: 28px;
     color: var(--text-main);
+}
+
+/* DASHBOARD GRID */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
 }
 
 /* CITAS HOY (Dashboard) */
@@ -413,6 +472,84 @@ tr:hover td {
 
 .cita:last-child {
     border-bottom: none;
+}
+
+/* ATAJOS RÁPIDOS */
+.shortcuts-box {
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.shortcuts-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.shortcut-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shortcut-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.shortcut-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.bg-blue {
+    background-color: #E0F2FE;
+    color: #0284C7;
+}
+.bg-blue img {
+    filter: invert(32%) sepia(93%) saturate(2453%) hue-rotate(211deg) brightness(95%) contrast(93%);
+}
+
+.bg-green {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+.bg-green img {
+    filter: invert(49%) sepia(82%) saturate(399%) hue-rotate(97deg) brightness(91%) contrast(93%);
+}
+
+.bg-purple {
+    background-color: #F3E8FF;
+    color: #9333EA;
+}
+.bg-purple img {
+    filter: invert(27%) sepia(85%) saturate(3015%) hue-rotate(258deg) brightness(92%) contrast(95%);
+}
+
+.bg-yellow {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+.bg-yellow img {
+    filter: invert(53%) sepia(83%) saturate(1209%) hue-rotate(14deg) brightness(94%) contrast(97%);
 }
 
 .hora {
@@ -443,6 +580,13 @@ tr:hover td {
 }
 
 @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

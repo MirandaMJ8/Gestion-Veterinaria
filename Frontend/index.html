@@ -31,6 +31,10 @@
             <!-- TOP BAR -->
             <div class="topbar">
                 <input type="text" placeholder="Buscar pacientes, clientes...">
+                <button class="icon-btn">
+                    <img src="images/MdiBellOutline.png" alt="Notificaciones">
+                    <span class="notification-badge"></span>
+                </button>
             </div>
 
             <!-- TÍTULO -->
@@ -80,23 +84,48 @@
                 </div>
             </div>
 
-            <!-- CITAS -->
-            <div class="citas-box">
-                <h3>Citas para Hoy</h3>
+            <div class="dashboard-grid">
+                <!-- CITAS -->
+                <div class="citas-box">
+                    <h3>Citas para Hoy</h3>
 
-                <div class="cita">
-                    <span class="hora">10:00</span>
-                    <div>
-                        <strong>Luna (Perro)</strong>
-                        <p>Revisión general</p>
+                    <div class="cita">
+                        <span class="hora">10:00</span>
+                        <div>
+                            <strong>Luna (Perro)</strong>
+                            <p>Revisión general</p>
+                        </div>
+                    </div>
+
+                    <div class="cita">
+                        <span class="hora">11:30</span>
+                        <div>
+                            <strong>Milo (Gato)</strong>
+                            <p>Vacunación</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="cita">
-                    <span class="hora">11:30</span>
-                    <div>
-                        <strong>Milo (Gato)</strong>
-                        <p>Vacunación</p>
+                <!-- ATAJOS -->
+                <div class="shortcuts-box">
+                    <h3>Atajos Rápidos</h3>
+                    <div class="shortcuts-grid">
+                        <a href="pages/clientes.html" class="shortcut-item bg-blue">
+                            <img src="images/MdiAccount.png" alt="Clientes">
+                            <span>Clientes</span>
+                        </a>
+                        <a href="pages/mascotas.html" class="shortcut-item bg-green">
+                            <img src="images/MdiPaw.png" alt="Mascotas">
+                            <span>Mascotas</span>
+                        </a>
+                        <a href="pages/citas.html" class="shortcut-item bg-purple">
+                            <img src="images/MdiCalendarHeart.png" alt="Citas">
+                            <span>Citas</span>
+                        </a>
+                        <a href="pages/facturas.html" class="shortcut-item bg-yellow">
+                            <img src="images/MdiFileDocument.png" alt="Facturas">
+                            <span>Facturas</span>
+                        </a>
                     </div>
                 </div>
             </div>
