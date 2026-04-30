@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clientes</title>
+    <title>Citas</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
@@ -17,9 +17,9 @@
         </div>
         <ul>
             <li><a href="../index.html">Panel</a></li>
-            <li><a href="clientes.html" class="active">Clientes</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
             <li><a href="mascotas.html">Mascotas</a></li>
-            <li><a href="citas.html">Citas</a></li>
+            <li><a href="citas.html" class="active">Citas</a></li>
             <li><a href="facturas.html">Facturación</a></li>
         </ul>
     </aside>
@@ -28,19 +28,20 @@
     <main class="main-content">
 
         <div class="header">
-            <h1>Gestión de Clientes</h1>
-            <button id="btnNuevo">+ Nuevo Cliente</button>
+            <h1>Gestión de Citas</h1>
+            <button id="btnNuevo">+ Nueva Cita</button>
         </div>
 
         <!-- FORMULARIO (oculto) -->
         <div id="formContainer" class="hidden">
-            <form id="formCliente">
+            <form id="formCita">
                 <div class="input-group">
-                    <input type="text" id="dni" placeholder="DNI">
-                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="date" id="fecha">
+                    <input type="time" id="hora">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="apellido" placeholder="Apellido">
+                    <input type="text" id="mascota" placeholder="Nombre de Mascota">
+                    <input type="text" id="motivo" placeholder="Motivo de la Cita">
                 </div>
                 <button type="submit">Guardar</button>
             </form>
@@ -51,23 +52,23 @@
             <table>
                 <thead>
                     <tr>
-                        <th>DNI</th>
-                        <th>Cliente</th>
-                        <th>Contacto</th>
+                        <th>Fecha y Hora</th>
+                        <th>Mascota</th>
+                        <th>Motivo</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tablaClientes">
+                <tbody id="tablaCitas">
                     <tr>
-                        <td>12345678A</td>
-                        <td>Juan Pérez</td>
-                        <td>juan@example.com</td>
+                        <td>Hoy, 10:00</td>
+                        <td>Luna (Perro)</td>
+                        <td>Revisión general</td>
                         <td><button class="btn-small">Editar</button></td>
                     </tr>
                     <tr>
-                        <td>87654321B</td>
-                        <td>Ana García</td>
-                        <td>ana@example.com</td>
+                        <td>Hoy, 11:30</td>
+                        <td>Milo (Gato)</td>
+                        <td>Vacunación</td>
                         <td><button class="btn-small">Editar</button></td>
                     </tr>
                 </tbody>
@@ -77,6 +78,6 @@
     </main>
 
 </div>
-<script src="../js/clientes.js"></script>
+<script src="../JS/citas.js"></script>
 </body>
 </html>

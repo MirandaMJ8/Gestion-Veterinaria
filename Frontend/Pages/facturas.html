@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clientes</title>
+    <title>Facturación</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
@@ -17,10 +17,10 @@
         </div>
         <ul>
             <li><a href="../index.html">Panel</a></li>
-            <li><a href="clientes.html" class="active">Clientes</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
             <li><a href="mascotas.html">Mascotas</a></li>
             <li><a href="citas.html">Citas</a></li>
-            <li><a href="facturas.html">Facturación</a></li>
+            <li><a href="facturas.html" class="active">Facturación</a></li>
         </ul>
     </aside>
 
@@ -28,21 +28,21 @@
     <main class="main-content">
 
         <div class="header">
-            <h1>Gestión de Clientes</h1>
-            <button id="btnNuevo">+ Nuevo Cliente</button>
+            <h1>Facturación</h1>
+            <button id="btnNuevo">+ Nueva Factura</button>
         </div>
 
         <!-- FORMULARIO (oculto) -->
         <div id="formContainer" class="hidden">
-            <form id="formCliente">
+            <form id="formFactura">
                 <div class="input-group">
-                    <input type="text" id="dni" placeholder="DNI">
-                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="text" id="cliente" placeholder="DNI del Cliente">
+                    <input type="number" id="monto" placeholder="Monto Total (€)">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="apellido" placeholder="Apellido">
+                    <input type="text" id="descripcion" placeholder="Descripción de los servicios" style="flex: 2;">
                 </div>
-                <button type="submit">Guardar</button>
+                <button type="submit">Generar Factura</button>
             </form>
         </div>
 
@@ -51,24 +51,27 @@
             <table>
                 <thead>
                     <tr>
-                        <th>DNI</th>
                         <th>Cliente</th>
-                        <th>Contacto</th>
+                        <th>Descripción</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tablaClientes">
+                <tbody id="tablaFacturas">
                     <tr>
                         <td>12345678A</td>
-                        <td>Juan Pérez</td>
-                        <td>juan@example.com</td>
-                        <td><button class="btn-small">Editar</button></td>
+                        <td>Revisión general y desparasitación</td>
+                        <td>€45.00</td>
+                        <td><span class="badge success">Pagado</span></td>
+                        <td><button class="btn-small">Ver</button></td>
                     </tr>
                     <tr>
                         <td>87654321B</td>
-                        <td>Ana García</td>
-                        <td>ana@example.com</td>
-                        <td><button class="btn-small">Editar</button></td>
+                        <td>Vacunación anual</td>
+                        <td>€60.00</td>
+                        <td><span class="badge warning">Pendiente</span></td>
+                        <td><button class="btn-small">Pagar</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -77,6 +80,6 @@
     </main>
 
 </div>
-<script src="../js/clientes.js"></script>
+<script src="../JS/facturas.js"></script>
 </body>
 </html>

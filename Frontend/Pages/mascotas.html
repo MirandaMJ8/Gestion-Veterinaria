@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Clientes</title>
+    <title>Mascotas</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
@@ -17,8 +17,8 @@
         </div>
         <ul>
             <li><a href="../index.html">Panel</a></li>
-            <li><a href="clientes.html" class="active">Clientes</a></li>
-            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="mascotas.html" class="active">Mascotas</a></li>
             <li><a href="citas.html">Citas</a></li>
             <li><a href="facturas.html">Facturación</a></li>
         </ul>
@@ -28,19 +28,20 @@
     <main class="main-content">
 
         <div class="header">
-            <h1>Gestión de Clientes</h1>
-            <button id="btnNuevo">+ Nuevo Cliente</button>
+            <h1>Gestión de Mascotas</h1>
+            <button id="btnNuevo">+ Nueva Mascota</button>
         </div>
 
         <!-- FORMULARIO (oculto) -->
         <div id="formContainer" class="hidden">
-            <form id="formCliente">
+            <form id="formMascota">
                 <div class="input-group">
-                    <input type="text" id="dni" placeholder="DNI">
-                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="text" id="nombreMascota" placeholder="Nombre">
+                    <input type="text" id="especie" placeholder="Especie (Ej: Perro, Gato)">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="apellido" placeholder="Apellido">
+                    <input type="text" id="raza" placeholder="Raza">
+                    <input type="text" id="dueno" placeholder="DNI del Dueño">
                 </div>
                 <button type="submit">Guardar</button>
             </form>
@@ -51,23 +52,23 @@
             <table>
                 <thead>
                     <tr>
-                        <th>DNI</th>
-                        <th>Cliente</th>
-                        <th>Contacto</th>
+                        <th>Nombre</th>
+                        <th>Especie/Raza</th>
+                        <th>Dueño</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tablaClientes">
+                <tbody id="tablaMascotas">
                     <tr>
+                        <td>Luna</td>
+                        <td>Perro / Labrador</td>
                         <td>12345678A</td>
-                        <td>Juan Pérez</td>
-                        <td>juan@example.com</td>
                         <td><button class="btn-small">Editar</button></td>
                     </tr>
                     <tr>
+                        <td>Milo</td>
+                        <td>Gato / Siamés</td>
                         <td>87654321B</td>
-                        <td>Ana García</td>
-                        <td>ana@example.com</td>
                         <td><button class="btn-small">Editar</button></td>
                     </tr>
                 </tbody>
@@ -77,6 +78,6 @@
     </main>
 
 </div>
-<script src="../js/clientes.js"></script>
+<script src="../JS/mascotas.js"></script>
 </body>
 </html>
