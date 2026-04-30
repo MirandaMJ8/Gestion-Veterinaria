@@ -62,6 +62,13 @@ body {
     border-radius: var(--radius-md);
 }
 
+.logo-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+}
+
 .sidebar h2 {
     margin: 0;
     font-weight: 700;
@@ -90,9 +97,23 @@ body {
     transition: all 0.2s ease;
 }
 
+.sidebar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
 .sidebar ul li a:hover {
     background-color: var(--sidebar-hover);
     color: var(--white);
+}
+
+.sidebar ul li a:hover .sidebar-icon,
+.sidebar ul li a.active .sidebar-icon {
+    opacity: 1;
 }
 
 .sidebar ul li a.active {
@@ -302,22 +323,68 @@ tr:hover td {
     box-shadow: var(--shadow-md);
     transition: transform 0.2s;
     border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
 }
 
 .card:hover {
     transform: translateY(-2px);
 }
 
-.card p {
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.card-icon-wrapper img {
+    width: 28px;
+    height: 28px;
+}
+
+.icon-blue {
+    background-color: #E0F2FE;
+}
+.icon-blue img {
+    filter: invert(32%) sepia(93%) saturate(2453%) hue-rotate(211deg) brightness(95%) contrast(93%);
+}
+
+.icon-green {
+    background-color: #D1FAE5;
+}
+.icon-green img {
+    filter: invert(49%) sepia(82%) saturate(399%) hue-rotate(97deg) brightness(91%) contrast(93%);
+}
+
+.icon-purple {
+    background-color: #F3E8FF;
+}
+.icon-purple img {
+    filter: invert(27%) sepia(85%) saturate(3015%) hue-rotate(258deg) brightness(92%) contrast(95%);
+}
+
+.icon-yellow {
+    background-color: #FEF3C7;
+}
+.icon-yellow img {
+    filter: invert(53%) sepia(83%) saturate(1209%) hue-rotate(14deg) brightness(94%) contrast(97%);
+}
+
+.card-info p {
     color: var(--text-muted);
-    margin: 0 0 8px 0;
+    margin: 0 0 4px 0;
     font-size: 14px;
     font-weight: 500;
 }
 
-.card h2 {
+.card-info h2 {
     margin: 0;
-    font-size: 32px;
+    font-size: 28px;
     color: var(--text-main);
 }
 
